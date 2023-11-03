@@ -173,8 +173,8 @@ def main(file : str):
         dec_resource = os.path.join(local_dir, "..", "dist", "resource")
         force_copy_tree(src_resource, dec_resource)
 
-        # 刪除.app目錄
-        del_app = os.path.join(local_dir, "..", "dist", f"{exe_name}.app")
+        # 刪除exe_name, 保留 exe_name.app
+        del_app = os.path.join(local_dir, "..", "dist", f"{exe_name}")
         shutil.rmtree(del_app)
         
         # 打包
