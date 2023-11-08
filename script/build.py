@@ -125,7 +125,7 @@ def main(file : str):
     if OSName.OS_WINDOWS == os_name:
         cmd = f'pyinstaller -D -w -i ./{app_project_name}/app/resource/favicon.ico -n {exe_name} ./{app_project_name}/app/main.py'
     else:
-        cmd = f'pyinstaller -F -w -i ./{app_project_name}/app/resource/favicon.icns -n mytest ./{app_project_name}/app/test.py'
+        cmd = f'pyinstaller -F -w -i ./{app_project_name}/app/resource/favicon.icns -n {exe_name} ./{app_project_name}/app/test.py'
     os.system(cmd)
 
     print('pack app success')
