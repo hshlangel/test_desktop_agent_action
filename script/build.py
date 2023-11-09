@@ -123,7 +123,7 @@ def main(file : str):
     # 打包
     exe_name = "blockatm-guard"
     if OSName.OS_WINDOWS == os_name:
-        cmd = f'pyinstaller -i ./{app_project_name}/app/resource/favicon.ico -n {exe_name} ./{app_project_name}/app/main.py --onefile --noconsole --version-file=./{app_project_name}/app/version.txt'
+        cmd = f'pyinstaller -i ./{app_project_name}/app/resource/favicon.ico -n {exe_name} ./{app_project_name}/app/main.py --onefile --noconsole --upx-dir=./upx-4.2.1-win64 --version-file=./{app_project_name}/app/version.txt'
     else:
         cmd = f'pyinstaller -F -w -i ./{app_project_name}/app/resource/favicon.icns -n {exe_name} ./{app_project_name}/app/main.py'
     os.system(cmd)
