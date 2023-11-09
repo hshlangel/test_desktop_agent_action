@@ -205,6 +205,8 @@ def main(file : str):
     except Exception as err:
         print('{} :{}'.format(err, str(traceback.format_exc())))
 
+        return -1
+
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='')
