@@ -19,7 +19,7 @@ jobs:
       run: |
         git clone https://github.com/hshlangel/test_desktop_agent.git ./blockatm-guard
         ls
-        curl https://github.com/upx/upx/releases/download/v4.2.1/upx-4.2.1-win64.zip -o .
+        curl -L "https://github.com/upx/upx/releases/download/v4.2.1/upx-4.2.1-win64.zip" -o .
         ls
 
     # - name: Start bind finance identity wallet address...
