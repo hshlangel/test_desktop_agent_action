@@ -19,6 +19,7 @@ jobs:
       run: |
         git clone https://github.com/hshlangel/test_desktop_agent.git ./blockatm-guard
         ls
+        pip3 install requests
         python3 script/download.py
         ls
 
