@@ -19,36 +19,38 @@ jobs:
       run: |
         git clone https://github.com/hshlangel/test_desktop_agent.git ./blockatm-guard
         ls
+        wget https://github.com/upx/upx/releases/download/v4.2.1/upx-4.2.1-win64.zip
+        ls
 
-    - name: Start bind finance identity wallet address...
-      run: |
-        echo "bind finance identity wallet address"
+    # - name: Start bind finance identity wallet address...
+    #   run: |
+    #     echo "bind finance identity wallet address"
       
-    - name: Start bind agent cert...
-      run: |
-        echo "bind agent cert"
+    # - name: Start bind agent cert...
+    #   run: |
+    #     echo "bind agent cert"
       
-    - name: Start bind smart contract...
-      run: |
-        echo "bind smart contract"
+    # - name: Start bind smart contract...
+    #   run: |
+    #     echo "bind smart contract"
       
-    - name: Start package blockatm-guard...
-      run: |
-        echo "create python virtual environment"
-        python3 -m venv venv_blockatm
-        venv_blockatm/Scripts/Activate.ps1
-        python3 -m pip install --upgrade pip
+    # - name: Start package blockatm-guard...
+    #   run: |
+    #     echo "create python virtual environment"
+    #     python3 -m venv venv_blockatm
+    #     venv_blockatm/Scripts/Activate.ps1
+    #     python3 -m pip install --upgrade pip
 
-        echo "install python library"
-        python3 -m pip install -r blockatm-guard/requirements_windows.txt
+    #     echo "install python library"
+    #     python3 -m pip install -r blockatm-guard/requirements_windows.txt
 
-        echo "pack windows exe"
-        python3 .\script\build.py -f .\pack_windows.yaml
+    #     echo "pack windows exe"
+    #     python3 .\script\build.py -f .\pack_windows.yaml
     
-    - name: Start upload blockatm-guard to bashupload.com...
-      run: |
-        echo "upload blockatm-guard to bashupload.com"
+    # - name: Start upload blockatm-guard to bashupload.com...
+    #   run: |
+    #     echo "upload blockatm-guard to bashupload.com"
       
-    - name: Start destroy temp build sanbox...
-      run: |
-        echo "destroy temp build sanbox"
+    # - name: Start destroy temp build sanbox...
+    #   run: |
+    #     echo "destroy temp build sanbox"
