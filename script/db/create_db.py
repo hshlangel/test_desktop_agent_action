@@ -98,8 +98,6 @@ def create_db(file : str, aes_key : str, encrypt_dbname : str, decrypt_dbname : 
 
         conn.close()
 
-        os.system("ls")
-
         # 加密数据库
         if need_encrypt:
             res = encryption_sqlite_file(decrypt_dbname, password)
