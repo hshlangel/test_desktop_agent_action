@@ -176,7 +176,7 @@ def main(file : str):
 
         # 刪除exe_name.app
         del_app = os.path.join(local_dir, "..", "dist", f"{exe_name}.app")
-        shutil.rmtree(del_app)
+        #shutil.rmtree(del_app)
         
         # 打包
         shutil.make_archive(exe_name, 'zip', 'dist')
