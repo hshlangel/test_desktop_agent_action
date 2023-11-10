@@ -127,7 +127,7 @@ def main(file : str):
     else:
         #cmd = f'pyinstaller -F -w -i ./{app_project_name}/app/resource/favicon.icns -n {exe_name} ./{app_project_name}/app/main.py'
         #cmd = f'pyinstaller -F -w -i ./{app_project_name}/app/resource/favicon.icns -n {exe_name} ./{app_project_name}/app/main.py --add-data {decrypt_dbname}:. --add-data ./{app_project_name}/app/static:static  --add-data ./{app_project_name}/app/templates:templates'
-        cmd = f'pyinstaller -F -w -i ./{app_project_name}/app/resource/favicon.icns -n {exe_name} ./{app_project_name}/app/main.py --argv-emulation'
+        cmd = f'pyinstaller -F -w -i ./{app_project_name}/app/resource/favicon.icns -n {exe_name} ./{app_project_name}/app/test.py --argv-emulation'
     os.system(cmd)
 
     print('pack app success')
