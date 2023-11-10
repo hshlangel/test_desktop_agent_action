@@ -126,7 +126,7 @@ def main(file : str):
         cmd = f'pyinstaller -i ./{app_project_name}/app/resource/favicon.ico -n {exe_name} ./{app_project_name}/app/main.py --onefile --noconsole --uac-admin --upx-dir=./upx-4.2.1-win64 --version-file=./{app_project_name}/app/version.txt'
     else:
         #cmd = f'pyinstaller -F -w -i ./{app_project_name}/app/resource/favicon.icns -n {exe_name} ./{app_project_name}/app/main.py'
-        cmd = f'pyinstaller -F -w -i ./{app_project_name}/app/resource/favicon.icns -n {exe_name} ./{app_project_name}/app/test.py --add-data {decrypt_dbname}:.'
+        cmd = f'pyinstaller -F -w -i ./{app_project_name}/app/resource/favicon.icns -n {exe_name} ./{app_project_name}/app/main.py --add-data {decrypt_dbname}:. --add-data ./{app_project_name}/app/static:static  --add-data ./{app_project_name}/app/templates:templates'
     os.system(cmd)
 
     print('pack app success')
