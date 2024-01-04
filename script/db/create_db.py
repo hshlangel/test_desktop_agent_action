@@ -7,8 +7,8 @@ import yaml
 import argparse
 import sqlite3
 import traceback
-from acs import aesdecrypt
-from sqlcrypt import Connection
+from .acs import aesdecrypt
+from .sqlcrypt import Connection
 
 
 def create_db(file : str, app_conf : dict, aes_key : str, encrypt_dbname : str, decrypt_dbname : str, password : str, need_encrypt : bool):
